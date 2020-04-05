@@ -1,6 +1,8 @@
 'use strict'
 
 const indexWordsTemplate = require('../templates/indexWords.handlebars')
+const store = require('../store')
+
 
 const submitSuccess = function (data) {
   console.log(data)
@@ -13,9 +15,12 @@ const submitFailure = function (data) {
 }
 
 const indexSuccess = function (data) {
-  console.log(data)
-  const indexWordsHtml = indexWordsTemplate({ words: data.words })
-  $('.index-content').append(indexWordsHtml)
+  const userWords = data.words.filter(function (word) {
+    console.log(word.user)
+    return word.user.id === store.user.id
+  })
+  const indexWordsHtml = indexWordsTemplate({ words: userWords })
+  $('.content').html(indexWordsHtml)
 }
 
 const indexFailure = function (error) {
@@ -23,20 +28,23 @@ const indexFailure = function (error) {
 }
 
 const deleteIndex = () => {
-  console.log('deleteIndex pinged')
-  $('.index-content').empty()
+  $('.content').empty()
 }
 
-// const onDeleteWordSuccess = function (data) {
-//
-// }
+const deleteWordSuccess = function (data) {
+  indexSuccess(data)
+}
 
-// onDeleteWordFailure
+const deleteWordFailure = () => {
+
+}
 
 module.exports = {
   submitSuccess,
   submitFailure,
   indexSuccess,
   indexFailure,
-  deleteIndex
+  deleteIndex,
+  deleteWordSuccess,
+  deleteWordFailure
 }

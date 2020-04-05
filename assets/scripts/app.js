@@ -21,4 +21,5 @@ $(() => {
   $('#word5').on('submit', wordsEvents.onSubmit)
   $('#index').on('submit', wordsEvents.onIndex)
   $('#delete-index').on('submit', wordsEvents.onDeleteIndex)
+  $('.content').on('submit', '#delete-word', wordsEvents.onDeleteWord)
 })

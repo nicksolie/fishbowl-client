@@ -23,7 +23,19 @@ const index = function () {
   })
 }
 
+const deleteWord = (wordId) => {
+  console.log('deleteword pinged')
+  return $.ajax({
+    url: config.apiUrl + '/words/' + wordId,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   submit,
-  index
+  index,
+  deleteWord
 }

@@ -3,8 +3,10 @@
   <section data-id="{{word.id}}">
     <h6>Name:</h6>
     <h3>
-      {{limit word.name 15}}
+      {{limit word.name 18}}
     </h3>
+    {{> deleteWord}}
+    {{> updateWord}}
   </section>
 
 {{/each}}

@@ -12,59 +12,62 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <p id="message"></p>
-      <form id="sign-in">
-      <legend>Sign In</legend>
-        <input type="text" name="credentials[email]" placeholder="example@email.com">
-        <input type="password" name="credentials[password]" placeholder="Password">
-        <input type="submit" value="Sign In">
-      </form>
-      <form id="sign-up">
-        <legend>Sign Up</legend>
-        <input type="text" name="credentials[email]" placeholder="example@email.com">
-        <input type="password" name="credentials[password]" placeholder="Password">
-        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-        <input type="submit" value="Sign Up">
-      </form>
-      <form id="change-password" class="hidden">
-        <legend>Change Password</legend>
-        <input type="password" name="passwords[old]" placeholder="Old Password">
-        <input type="password" name="passwords[new]" placeholder="New Password">
-        <input type="submit" value="Change Password">
-      </form>
-      <form id="sign-out" class="hidden">
-        <input type="submit" value="Sign Out">
-      </form>
-      <p>-------------WORDS-------------------------</p>
-      <p class="words-message"></p>
-      <form id="word1">
-        <input type="text" name="word[name]" placeholder="Enter Word 1">
-        <input type="submit" value="Submit!">
-      </form>
-      <form id="word2">
-        <input type="text" name="word[name]" placeholder="Enter Word 1">
-        <input type="submit" value="Submit!">
-      </form>
-      <form id="word3">
-        <input type="text" name="word[name]" placeholder="Enter Word 1">
-        <input type="submit" value="Submit!">
-      </form>
-      <form id="word4">
-        <input type="text" name="word[name]" placeholder="Enter Word 1">
-        <input type="submit" value="Submit!">
-      </form>
-      <form id="word5">
-        <input type="text" name="word[name]" placeholder="Enter Word 1">
-        <input type="submit" value="Submit!">
-      </form>
-      <p>--------------------INDEX---------------------------</p>
-      <form id="delete-index">
-        <input type="submit" value="Remove All!">
-      </form>
-      <p class="index-content"></p>
-      <form id="index">
-        <input type="submit" value="Submit!">
-      </form>
-
+      <main>
+        <p id="message"></p>
+        <form id="sign-in">
+        <legend>Sign In</legend>
+          <input type="text" name="credentials[email]" placeholder="example@email.com">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign In">
+        </form>
+        <form id="sign-up">
+          <legend>Sign Up</legend>
+          <input type="text" name="credentials[email]" placeholder="example@email.com">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" value="Sign Up">
+        </form>
+        <form id="change-password" class="hidden">
+          <legend>Change Password</legend>
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change Password">
+        </form>
+        <form id="sign-out" class="hidden">
+          <input type="submit" value="Sign Out">
+        </form>
+        <p>-------------WORDS-------------------------</p>
+        <p class="words-message"></p>
+        <form id="word1">
+          <input type="text" name="word[name]" placeholder="Enter Word 1">
+          <input type="submit" value="Submit!">
+        </form>
+        <form id="word2">
+          <input type="text" name="word[name]" placeholder="Enter Word 1">
+          <input type="submit" value="Submit!">
+        </form>
+        <form id="word3">
+          <input type="text" name="word[name]" placeholder="Enter Word 1">
+          <input type="submit" value="Submit!">
+        </form>
+        <form id="word4">
+          <input type="text" name="word[name]" placeholder="Enter Word 1">
+          <input type="submit" value="Submit!">
+        </form>
+        <form id="word5">
+          <input type="text" name="word[name]" placeholder="Enter Word 1">
+          <input type="submit" value="Submit!">
+        </form>
+        <p>--------------------INDEX---------------------------</p>
+        <div class="content">
+        </div>
+        <form id="delete-index">
+          <input type="submit" value="Hide All!">
+        </form>
+        <p class="index-content"></p>
+        <form id="index">
+          <input type="submit" value="View All!">
+        </form>
+      </main>
     </body>
 </html>
