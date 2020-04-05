@@ -1,0 +1,10 @@
+{{#each words as |word|}}
+  {{log word}}
+  <section data-id="{{word.id}}">
+    <h6>Name:</h6>
+    <h3>
+      {{limit word.name 15}}
+    </h3>
+  </section>
+
+{{/each}}
