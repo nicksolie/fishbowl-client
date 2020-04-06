@@ -12,52 +12,65 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <main class="sidenav">
+      <div class="sidenav">
         <div class="login-main-text">
           <h2>Welcome to<br> FishBowl!</h2>
           <p>Login or register from here to access.</p>
         </div>
-        <div class="main">
+      </div>
+      <main class="main">
+        <div class="col-md-6 col-sm-12 row">
           <p id="message"></p>
-          <form id="sign-in">
-          <legend>Sign In</legend>
-            <input type="text" name="credentials[email]" placeholder="example@email.com">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="submit" value="Sign In">
-          </form>
-          <form id="sign-up">
-            <legend>Sign Up</legend>
-            <input type="text" name="credentials[email]" placeholder="example@email.com">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-            <input type="submit" value="Sign Up">
-          </form>
-          <form id="change-password" class="hidden">
-            <legend>Change Password</legend>
-            <input type="password" name="passwords[old]" placeholder="Old Password">
-            <input type="password" name="passwords[new]" placeholder="New Password">
-            <input type="submit" value="Change Password">
-          </form>
-          <form id="sign-out" class="hidden">
-            <input type="submit" value="Sign Out">
-          </form>
-          <p>-------------WORD-------------------------</p>
-          <p class="words-message"></p>
-          <form id="word1">
-            <input type="text" name="word[name]" placeholder="Enter Word">
-            <input type="submit" value="Submit!">
-          </form>
-          <p>--------------------INDEX---------------------------</p>
-          <div class="content">
+          <div class="login-form">
+            <form id="sign-in">
+              <legend>Sign In</legend>
+              <div class="form-group">
+                <input type="text" class="form-control" name="credentials[email]" placeholder="example@email.com">
+                <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+                <input type="submit" value="Sign In">
+              </div>
+            </form>
           </div>
+          <!-- <div class="form-group">
+            <form id="sign-up">
+              <legend>Sign Up</legend>
+              <input type="text" class="form-control" name="credentials[email]" placeholder="example@email.com">
+              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+              <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <input type="submit" value="Sign Up">
+            </form>
+          </div> -->
+          <div class="form-group">
+            <form id="change-password" class="hidden form-control">
+              <legend>Change Password</legend>
+              <input type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
+              <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
+              <input type="submit" value="Change Password">
+            </form>
+            <form id="sign-out" class="hidden">
+              <input type="submit" value="Sign Out">
+            </form>
+          </div>
+        </div>
+        <div class="form-group row">
+          <form id="word1" class="form-control">
+            <input type="text" class="form-control" name="word[name]" placeholder="Enter Word">
+            <input type="submit" value="Submit!">
+            <p class="words-message"></p>
+          <form id="index">
+              <input type="submit" value="View All!">
+          </form>
+          </form>
+        </div>
+
+        <div class="form-group row">
           <form id="delete-index">
             <input type="submit" value="Hide All!">
           </form>
-          <p class="index-content"></p>
-          <form id="index">
-            <input type="submit" value="View All!">
-          </form>
         </div>
+        <div class="content">
+        </div>
+        <p class="index-content"></p>
       </main>
     </body>
 </html>

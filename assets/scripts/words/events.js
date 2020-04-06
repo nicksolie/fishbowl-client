@@ -1,7 +1,6 @@
 'use strict'
 
 const getFormFields = require('../../../lib/get-form-fields.js')
-// const store = require('../store')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
@@ -29,9 +28,6 @@ const onDeleteIndex = function (event) {
 
 const onDeleteWord = function (event) {
   event.preventDefault()
-  // const data = getFormFields(event.target)
-  // store.deleteWord = data.deleteWord
-  // passed data prior
   const wordId = $(event.target).closest('section').data('id')
   api.deleteWord(wordId)
     .then(function () {
@@ -42,11 +38,7 @@ const onDeleteWord = function (event) {
 
 const onUpdateWord = function (event) {
   event.preventDefault()
-  // console.log('pinged onUpdateWord')
-  const data = getFormFields(event.target)
-  const id = $(event.target).closest('section').data('id')
-  console.log(id)
-  api.updateWord(id, data)
+  api.updateWord()
     .then(function () {
       onIndex(event)
     },
@@ -54,17 +46,10 @@ const onUpdateWord = function (event) {
     .catch(ui.updateWordFailure)
 }
 
-const onUpdateButton = function (event) {
-  event.preventDefault()
-  const id = $(event.target).closest('section').data('id')
-  ui.updateButtonSuccess(id)
-}
-
 module.exports = {
   onSubmit,
   onIndex,
   onDeleteWord,
   onDeleteIndex,
-  onUpdateWord,
-  onUpdateButton
+  onUpdateWord
 }
