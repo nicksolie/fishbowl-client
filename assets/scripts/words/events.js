@@ -16,8 +16,7 @@ const onSubmit = function (event) {
 const onIndex = function (event) {
   event.preventDefault()
   console.log('ping onIndex')
-  const data = getFormFields(event.target)
-  api.index(data)
+  api.index()
     .then(ui.indexSuccess)
     .catch(ui.indexFailure)
 }
@@ -35,13 +34,37 @@ const onDeleteWord = function (event) {
   // passed data prior
   const wordId = $(event.target).closest('section').data('id')
   api.deleteWord(wordId)
-    .then(ui.deleteWordSuccess)
+    .then(function () {
+      onIndex(event)
+    })
     .catch(ui.deleteWordFailure)
+}
+
+const onUpdateWord = function (event) {
+  event.preventDefault()
+  // console.log('pinged onUpdateWord')
+  const data = getFormFields(event.target)
+  const id = $(event.target).closest('section').data('id')
+  console.log(id)
+  api.updateWord(id, data)
+    .then(function () {
+      onIndex(event)
+    },
+    ui.updateWordSuccess)
+    .catch(ui.updateWordFailure)
+}
+
+const onUpdateButton = function (event) {
+  event.preventDefault()
+  const id = $(event.target).closest('section').data('id')
+  ui.updateButtonSuccess(id)
 }
 
 module.exports = {
   onSubmit,
   onIndex,
   onDeleteWord,
-  onDeleteIndex
+  onDeleteIndex,
+  onUpdateWord,
+  onUpdateButton
 }

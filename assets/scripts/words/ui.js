@@ -2,6 +2,7 @@
 
 const indexWordsTemplate = require('../templates/indexWords.handlebars')
 const store = require('../store')
+const events = require('./events.js')
 
 
 const submitSuccess = function (data) {
@@ -31,11 +32,18 @@ const deleteIndex = () => {
   $('.content').empty()
 }
 
-const deleteWordSuccess = function (data) {
-  indexSuccess(data)
+const deleteWordSuccess = function () {
 }
 
 const deleteWordFailure = () => {
+
+}
+
+const updateWordSuccess = function (data) {
+
+}
+
+const updateWordFailure = function (data) {
 
 }
 
@@ -46,5 +54,7 @@ module.exports = {
   indexFailure,
   deleteIndex,
   deleteWordSuccess,
-  deleteWordFailure
+  deleteWordFailure,
+  updateWordSuccess,
+  updateWordFailure
 }

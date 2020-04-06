@@ -1,9 +1,9 @@
 const config = require('../config.js')
 const store = require('../store')
+const getFormFields = require('../../../lib/get-form-fields.js')
 
 const submit = function (data) {
   event.preventDefault()
-  console.log('submit pinged')
   return $.ajax({
     url: config.apiUrl + '/words',
     method: 'POST',
@@ -23,19 +23,35 @@ const index = function () {
   })
 }
 
-const deleteWord = (wordId) => {
-  console.log('deleteword pinged')
+const deleteWord = (data) => {
+  const wordId = $(event.target).closest('section').data('id')
   return $.ajax({
     url: config.apiUrl + '/words/' + wordId,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    }
+    },
+    data: data
+  })
+}
+
+const updateWord = () => {
+  console.log('updateWord pinged')
+  const id = $(event.target).closest('section').data('id')
+  const data = getFormFields(event.target)
+  return $.ajax({
+    url: config.apiUrl + '/words/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
   })
 }
 
 module.exports = {
   submit,
   index,
-  deleteWord
+  deleteWord,
+  updateWord
 }
