@@ -22,18 +22,8 @@
         <header>
           <p id="message"></p>
         </header>
-        <section class="col-md-6 col-sm-12">
-          <!-- <div class="login-form">
-            <form id="sign-in">
-              <legend>Sign In</legend>
-              <div class="form-group">
-                <input type="text" class="form-control" name="credentials[email]" placeholder="example@email.com">
-                <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-                <input type="submit" value="Sign In">
-              </div>
-            </form>
-          </div> -->
-          <div class="login-form">
+        <section class="signin-signup-group col-md-6 col-sm-12">
+          <!-- <section class="login-form">
             <form id="sign-in">
               <legend>Sign In</legend>
               <div class="form-group">
@@ -44,28 +34,30 @@
                   <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
                 </div>
                 <div>
-                  <input type="submit" value="Sign In">
+                  <input type="submit" class="btn" value="Sign In">
                 </div>
               </div>
             </form>
-          </div>
+          </section> -->
           <div class="form-group">
             <form id="sign-up">
               <legend>Sign Up</legend>
               <input type="text" class="form-control" name="credentials[email]" placeholder="example@email.com">
               <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
               <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password">
-              <input type="submit" value="Sign Up">
+              <br>
+              <input type="submit" value="Sign Up" class="btn">
             </form>
           </div>
           <div class="form-group">
             <form id="change-password" class="">
               <input type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
               <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
-              <input type="submit" value="Change Password">
+              <input type="submit" value="Change Password" class="btn">
             </form>
+            <br>
             <form id="sign-out" class="hidden">
-              <input type="submit" value="Sign Out">
+              <input type="submit" value="Sign Out" class="btn">
             </form>
           </div>
           <div class="form-group">
