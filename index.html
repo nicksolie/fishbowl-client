@@ -14,16 +14,30 @@
     <body>
       <section class="sidenav">
         <div class="login-main-text">
-          <h2>Welcome to<br> FishBowl!</h2>
+          <h2>Welcome to<br>FishBowl!</h2>
+          <br>
           <p>Login or register from here to access.</p>
-        </div>
-      </section>
-      <main class="main">
-        <header>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
           <p id="message"></p>
-        </header>
-        <section class="signin-signup-group col-md-6 col-sm-12">
-          <!-- <section class="login-form">
+        </div>
+
+      </section>
+      <main class="main col-md-6 col-sm-12">
+        <section class="main-container">
+          <section class="login-form">
             <form id="sign-in">
               <legend>Sign In</legend>
               <div class="form-group">
@@ -38,47 +52,28 @@
                 </div>
               </div>
             </form>
-          </section> -->
-          <div class="form-group">
+          </section>
+          <br>
+          <section class="signup-form form-group">
             <form id="sign-up">
               <legend>Sign Up</legend>
-              <input type="text" class="form-control" name="credentials[email]" placeholder="example@email.com">
-              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-              <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password">
-              <br>
+              <div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="credentials[email]" placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                </div>
+              </div>
               <input type="submit" value="Sign Up" class="btn">
             </form>
-          </div>
-          <div class="form-group">
-            <form id="change-password" class="">
-              <input type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
-              <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
-              <input type="submit" value="Change Password" class="btn">
-            </form>
-            <br>
-            <form id="sign-out" class="hidden">
-              <input type="submit" value="Sign Out" class="btn">
-            </form>
-          </div>
-          <div class="form-group">
-            <form id="word1" class="">
-              <input type="text" name="word[name]" class="form-control" placeholder="Enter Word">
-              <input type="submit" value="Submit!">
-              <p class="words-message"></p>
-            </form>
-            <form id="index">
-              <input type="submit" value="View All!">
-            </form>
-          </div>
-          <div class="content">
-          </div>
-          <div class="form-group">
-            <form id="delete-index">
-              <input type="submit" value="Hide All!">
-            </form>
-          </div>
-          <p class="index-content"></p>
+          </section>
         </section>
+        <div class="content">
+        </div>
       </main>
     </body>
 </html>

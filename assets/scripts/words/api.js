@@ -36,7 +36,6 @@ const deleteWord = (data) => {
 }
 
 const updateWord = () => {
-  console.log('updateWord pinged')
   const id = $(event.target).closest('section').data('id')
   const data = getFormFields(event.target)
   return $.ajax({

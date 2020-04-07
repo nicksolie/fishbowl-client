@@ -1,11 +1,14 @@
 {{#each words as |word|}}
-  <section data-id="{{word.id}}">
-    <h6>Name:</h6>
+  <section class="col-md-6 col-sm-12" data-id="{{word.id}}">
     <h3>
       {{limit word.name 18}}
     </h3>
-    {{> deleteWord}}
-    {{> updateWord}}
+    <div class="row">
+      {{> deleteWord}}
+    </div>
+    <div class="row">
+      {{> updateWord}}
+    </div>
   </section>
-
+  <br>
 {{/each}}

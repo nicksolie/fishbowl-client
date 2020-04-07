@@ -2,6 +2,7 @@
 
 body {
     font-family: "Lato", sans-serif;
+    background-color: #fefefa;
 }
 
 
@@ -40,31 +41,39 @@ body {
 
 @media screen and (min-width: 768px){
     .main{
-        margin-left: 40%;
+        margin-left: 36%;
     }
 
     .sidenav{
-        width: 40%;
+        width: 30%;
         position: fixed;
         z-index: 1;
         top: 0;
         left: 0;
     }
 
-    .login-form{
-        margin-top: 50%;
+    .change-password-signout-form {
+      margin-top: 23%;
+      margin-right: 30%;
     }
 
-    .register-form{
-        margin-top: 20%;
+    .login-form{
+        margin-top: 23%;
+        margin-right: 30%;
+    }
+
+    .signup-form {
+      border-top: 2px lightgrey solid;
+      margin-right: 30%;
+      padding-top: 25px;
+    }
+
+    #word1 {
+      border-top: 2px lightgrey solid;
+      margin-right: 30%;
+      padding-top: 30px;
     }
 }
-
-// .words {
-//   margin-top: 20%;
-//   padding: 60px;
-//   color: #fff;
-// }
 
 .login-main-text{
     margin-top: 20%;
@@ -79,4 +88,18 @@ body {
 .btn {
     background-color: lightskyblue !important;
     color: #fff;
+}
+
+.content section {
+  padding-top: 20px;
+  border: 2px solid lightskyblue;
+}
+
+#index {
+  padding-right: 10px;
+}
+
+#message {
+  font-size: 1.5em;
+  text-decoration: underline;
 }

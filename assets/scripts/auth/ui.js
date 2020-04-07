@@ -1,6 +1,7 @@
 'use strict'
 
-'use strict'
+const getChangePasswordSignoutTemplate = require('../templates/change-password-signout-form.handlebars')
+const getSignInSignUpForm = require('../templates/signin-signup-group.handlebars')
 const store = require('../store')
 
 const signUpSuccess = function () {
@@ -36,6 +37,8 @@ const signInSuccess = function (data) {
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
   $('#change-password').closest('form').find('input[type=password], textarea').val('')
   store.user = data.user
+  $('.main-container').html('')
+  $('.main-container').html(getChangePasswordSignoutTemplate)
 }
 
 const signInFailure = function () {
@@ -72,6 +75,7 @@ const signOutSuccess = function () {
   // $('#sign-out').addClass('hidden')
   // $('#sign-up').removeClass('hidden')
   document.getElementById('change-password').reset()
+  $('.main-container').html(getSignInSignUpForm)
 }
 
 const signOutFailure = function () {

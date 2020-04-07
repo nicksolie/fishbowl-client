@@ -8,13 +8,16 @@ const onSubmit = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.submit(data)
-    .then(ui.submitSuccess)
+    .then(function () {
+      onIndex(event)
+    },
+    ui.submitSuccess)
     .catch(ui.submitFailure)
 }
 
 const onIndex = function (event) {
+  console.log('dsfsdfs')
   event.preventDefault()
-  console.log('ping onIndex')
   api.index()
     .then(ui.indexSuccess)
     .catch(ui.indexFailure)
@@ -22,7 +25,6 @@ const onIndex = function (event) {
 
 const onDeleteIndex = function (event) {
   event.preventDefault()
-  console.log('pinged onDeleteIndex')
   ui.deleteIndex()
 }
 
