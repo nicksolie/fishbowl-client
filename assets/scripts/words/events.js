@@ -16,7 +16,6 @@ const onSubmit = function (event) {
 }
 
 const onIndex = function (event) {
-  console.log('dsfsdfs')
   event.preventDefault()
   api.index()
     .then(ui.indexSuccess)

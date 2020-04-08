@@ -14,7 +14,6 @@ const submitFailure = function (data) {
 
 const indexSuccess = function (data) {
   const userWords = data.words.filter(function (word) {
-    console.log(word.user)
     return word.user.id === store.user.id
   })
   const indexWordsHtml = indexWordsTemplate({ words: userWords })
