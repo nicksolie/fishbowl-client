@@ -3,6 +3,7 @@
 body {
     font-family: "Lato", sans-serif;
     background-color: #fefefa;
+    display: flex;
 }
 
 
@@ -27,6 +28,10 @@ body {
 
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
+
+    .scrolling-box {
+      z-index: -1;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -34,8 +39,8 @@ body {
         margin-top: 10%;
     }
 
-    .register-form{
-        margin-top: 10%;
+    .scrolling-box {
+      z-index: -1;
     }
 }
 
@@ -73,10 +78,19 @@ body {
       margin-right: 30%;
       padding-top: 30px;
     }
+
+    .scrolling-box {
+      display: block;
+      width: 400px;
+      height: 455px;
+      padding: 1em;
+      overflow-y: scroll;
+      text-align: center;
+    }
 }
 
 .login-main-text{
-    margin-top: 20%;
+    margin-top: 17%;
     padding: 60px;
     color: #fff;
 }
