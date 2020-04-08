@@ -16,7 +16,7 @@ $(() => {
   $('.main').on('submit', '#sign-out', authEvents.onSignOut)
   $('.main').on('submit', '#word1', wordsEvents.onSubmit)
   $('.main').on('submit', '#index', wordsEvents.onIndex)
-  $('.content').on('submit', '#delete-index', wordsEvents.onDeleteIndex)
+  $('.main').on('submit', '#delete-index', wordsEvents.onDeleteIndex)
   $('.content').on('submit', '#delete-word', wordsEvents.onDeleteWord)
   $('.content').on('submit', '#update-word-button', wordsEvents.onUpdateWord)
 })
