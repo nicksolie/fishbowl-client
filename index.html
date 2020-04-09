@@ -11,7 +11,9 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
+      <!-- Left side html -->
       <section class="sidenav">
         <div class="login-main-text">
           <h2>Welcome to<br>FishBowl!</h2>
@@ -19,6 +21,7 @@
           <p>Login or register from here to access.</p>
           <br>
           <p id="message"></p>
+
           <aside class="scrolling-box">
             <p class="instructions">Objective
               The object of the game is to correctly guess as many of the words or phrases when it is your team’s turn.
@@ -62,7 +65,10 @@
 
       </section>
       <main class="main col-md-6 col-sm-12">
+        <!-- Right side location for everything but generated content -->
         <section class="main-container">
+
+          <!-- Sign in form -->
           <section class="login-form">
             <form id="sign-in">
               <legend>Sign In</legend>
@@ -80,6 +86,8 @@
             </form>
           </section>
           <br>
+
+          <!-- Sign up form -->
           <section class="signup-form form-group">
             <form id="sign-up">
               <legend>Sign Up</legend>
@@ -97,9 +105,13 @@
               <input type="submit" value="Sign Up" class="btn">
             </form>
           </section>
+
         </section>
+
+        <!-- Location for generated content -->
         <div class="content">
         </div>
+
       </main>
     </body>
 </html>

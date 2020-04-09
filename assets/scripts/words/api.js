@@ -2,6 +2,7 @@ const config = require('../config.js')
 const store = require('../store')
 const getFormFields = require('../../../lib/get-form-fields.js')
 
+// API call for submitting new words
 const submit = function (data) {
   event.preventDefault()
   return $.ajax({
@@ -14,6 +15,7 @@ const submit = function (data) {
   })
 }
 
+// API call for indexing user words
 const index = function () {
   return $.ajax({
     url: config.apiUrl + '/words',
@@ -23,6 +25,7 @@ const index = function () {
   })
 }
 
+// API call for deleting a user's word
 const deleteWord = (data) => {
   const wordId = $(event.target).closest('section').data('id')
   return $.ajax({
@@ -35,6 +38,7 @@ const deleteWord = (data) => {
   })
 }
 
+// API call for updating a word
 const updateWord = () => {
   const id = $(event.target).closest('section').data('id')
   const data = getFormFields(event.target)
