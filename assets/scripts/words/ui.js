@@ -4,12 +4,10 @@ const indexWordsTemplate = require('../templates/indexWords.handlebars')
 const store = require('../store')
 
 const submitSuccess = function (data) {
-  $('.words-message').text('A new word has be successfuly create!')
   $('#word1').closest('form').find('input[type=text], textarea').val('')
 }
 
 const submitFailure = function (data) {
-  $('.words-message').text('failure')
 }
 
 // List all of user's words

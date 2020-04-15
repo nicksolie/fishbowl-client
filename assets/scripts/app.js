@@ -24,6 +24,7 @@ $(() => {
   // Listen for CRUD action on words
   $('.main').on('submit', '#index', wordsEvents.onIndex)
   $('.main').on('submit', '#delete-index', wordsEvents.onDeleteIndex)
+  $('.main').on('submit', '#delete-index', uiEvents.deleteIndex)
   $('.content').on('submit', '#delete-word', wordsEvents.onDeleteWord)
   $('.content').on('submit', '#update-word-button', wordsEvents.onUpdateWord)
 })
