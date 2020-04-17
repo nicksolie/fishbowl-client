@@ -41,7 +41,7 @@ https://imgur.com/a/qbXmJuu
 ###### These screenshots are a work from a work in progress and may not reflect the current version.
 
 
-*ERD:* ![https://imgur.com/a/YwoO3HC]( "ERD")
+*ERD:* [https://imgur.com/a/YwoO3HC]( "ERD")
 
 ## Future Iterations
 
