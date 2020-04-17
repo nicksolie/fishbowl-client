@@ -26,7 +26,6 @@ As a user, I want to delete my words
 *My wireframe from initial planning:* :
 https://imgur.com/a/qbXmJuu
 
-*My ERD:* https://imgur.com/a/YwoO3HC
 <!-- ![](assets/images/%20wireframe.jpeg "My Wireframe")
 
 <!-- *The current version:* -->
@@ -40,8 +39,6 @@ https://imgur.com/a/qbXmJuu
 ![](assets/images/project2_words_pic.jpeg "In-Game")
 ###### These screenshots are a work from a work in progress and may not reflect the current version.
 
-
-*ERD:* [https://imgur.com/a/YwoO3HC]( "ERD")
 
 ## Future Iterations
 
