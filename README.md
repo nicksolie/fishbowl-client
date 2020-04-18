@@ -3,11 +3,12 @@
 Fishbowl is a family-friendly party game that combines Charades, Password and Taboo. Players are split into two teams and have their score tracked through all three rounds. When a word is correctly guessed the player who scores adds a point to their team. The team with the most points wins!
 
 **You can play** [here](https://nicksolie.github.io/fishbowl-client/)
-**API Repo** [here](https://github.com/nicksolie/Fishbowl-api)
+
+**The API Repo** [here](https://github.com/nicksolie/Fishbowl-api)
 
 ### Development
 
-tackled this application with the lessons I learned from my tic-tac-toe project: more planning, sudo-coding and collaboration. I spent a chunk of my first day just scheduling and making a list of questions I had to resolve.  Using this approach I was able to solve out-loud a few requirements I was unsure about. As I starting coding, I would hit an issue I had already expounded on and be able to ask better questions.
+I tackled this application with the lessons I learned from my tic-tac-toe project: more planning, pseudo-coding and collaboration. I spent a chunk of my first day just scheduling and making a list of questions I had to resolve.  Using this approach I was able to solve out loud a few requirements I was unsure about. As I starting coding, I would hit an issue I had already expounded on and be able to ask better questions.
 
 I’m excited to see where this project goes over time. I believe once I complete further iterations I’ll have a fantastic app.
 <!-- Since this is the first web development application I’ve built, my development process after an initial planning phase was effectively ad-hoc. I started by creating the game board itself so I could have a representation of the primary function of the application. I then used the game board layout to guide me through the user storied I created during planning.
@@ -17,10 +18,10 @@ A lesson I’ve learned from this project is to notice when unsuccessful problem
 ## User Stories and Wireframe
 
 *My user stories from initial planning:*
-As a user, I want to add words
-As a user, I want to view my words
-As a user, I want to edit my words
-As a user, I want to delete my words
+As a user, I want to add words.
+As a user, I want to view my words.
+As a user, I want to edit my words.
+As a user, I want to delete my words.
 
 
 *My wireframe from initial planning:* :
