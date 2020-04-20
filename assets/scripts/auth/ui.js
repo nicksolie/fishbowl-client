@@ -1,7 +1,8 @@
 'use strict'
 
-const getChangePasswordSignoutTemplate = require('../templates/change-password-signout-form.handlebars')
+// const getChangePasswordSignoutTemplate = require('../templates/change-password-signout-form.handlebars')
 const getSignInSignUpForm = require('../templates/signin-signup-group.handlebars')
+const getCreateGameTemplate = require('../templates/create-game.handlebars')
 const store = require('../store')
 
 const signUpSuccess = function () {
@@ -31,7 +32,7 @@ const signInSuccess = function (data) {
   $('#change-password').closest('form').find('input[type=password], textarea').val('')
   store.user = data.user
   $('.main-container').html('')
-  $('.main-container').html(getChangePasswordSignoutTemplate)
+  $('.main-container').html(getCreateGameTemplate)
 }
 
 const signInFailure = function () {

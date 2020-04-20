@@ -8,6 +8,7 @@
 
 const authEvents = require('./auth/events.js')
 const wordsEvents = require('./words/events.js')
+const gameEvents = require('./game/events.js')
 const uiEvents = require('./words/ui.js')
 
 $(() => {
@@ -27,4 +28,8 @@ $(() => {
   $('.main').on('submit', '#delete-index', uiEvents.deleteIndex)
   $('.content').on('submit', '#delete-word', wordsEvents.onDeleteWord)
   $('.content').on('submit', '#update-word-button', wordsEvents.onUpdateWord)
+
+  // Listen for game events
+  $('.main').on('submit', '#create-game', gameEvents.onCreateGame)
+  $('.main').on('submit', '#join-game', gameEvents.onJoinGame)
 })
