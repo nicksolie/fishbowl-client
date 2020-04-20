@@ -9,6 +9,14 @@ const onCreateGame = function (event) {
     .catch(ui.createGameFailure)
 }
 
+const onJoinGame = function (event) {
+  event.preventDefault()
+  api.joinGame()
+    .then(ui.joinGameSuccess)
+    .catch(console.error)
+}
+
 module.exports = {
-  onCreateGame
+  onCreateGame,
+  onJoinGame
 }
