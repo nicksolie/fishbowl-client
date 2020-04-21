@@ -19,6 +19,12 @@ $(() => {
   $('.main').on('submit', '#change-password', authEvents.onChangePassword)
   $('.main').on('submit', '#sign-out', authEvents.onSignOut)
 
+  // Listen for game events
+  $('.main').on('submit', '#create-game', gameEvents.onCreateGame)
+  $('.main').on('submit', '#join-game', gameEvents.onJoinGame)
+  $('.main').on('submit', '#join-game', uiGameEvents.joinGameSuccess)
+  $('.main').on('submit', '#enter-game', uiGameEvents.enterGameSuccess)
+
   // Listen for new word submits
   $('.main').on('submit', '#word1', wordsEvents.onSubmit)
   $('.main').on('submit', '#word1', uiEvents.submitSuccess)
@@ -29,9 +35,4 @@ $(() => {
   $('.main').on('submit', '#delete-index', uiEvents.deleteIndex)
   $('.content').on('submit', '#delete-word', wordsEvents.onDeleteWord)
   $('.content').on('submit', '#update-word-button', wordsEvents.onUpdateWord)
-
-  // Listen for game events
-  $('.main').on('submit', '#create-game', gameEvents.onCreateGame)
-  $('.main').on('submit', '#join-game', gameEvents.onJoinGame)
-  $('.main').on('submit', '#join-game', uiGameEvents.joinGameSuccess)
 })
