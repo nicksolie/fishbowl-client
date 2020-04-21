@@ -30,7 +30,7 @@ const signInSuccess = function (data) {
   $('#sign-up').closest('form').find('input[type=password], textarea').val('')
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
   $('#change-password').closest('form').find('input[type=password], textarea').val('')
-  store.user = data.user
+  // store.user = data.user
   $('.main-container').html('')
   $('.main-container').html(getCreateGameTemplate)
 }

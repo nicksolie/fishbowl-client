@@ -1,6 +1,9 @@
 // const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+// const store = require('../store')
+const getFormFields = require('../../../lib/get-form-fields.js')
+
 
 const onCreateGame = function (event) {
   event.preventDefault()
@@ -11,7 +14,9 @@ const onCreateGame = function (event) {
 
 const onJoinGame = function (event) {
   event.preventDefault()
-  api.joinGame()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.joinGame(data)
     .then(ui.joinGameSuccess)
     .catch(console.error)
 }
