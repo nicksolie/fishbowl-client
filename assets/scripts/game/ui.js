@@ -9,10 +9,12 @@ const joinGameSuccess = function () {
   $('.main-container').html(pickWordsTemplate)
 }
 
-const enterGameSuccess = function () {
-  // $('.main-container').html('')
-  $('.main-container').html(enterGameTemplate)
-  // console.log(store.data)
+const enterGameSuccess = function (data) {
+  $('.main-container').html('')
+  $('.content').html('')
+  const enterGameHTML = enterGameTemplate({game: store.game})
+  $('.main-container').html(enterGameHTML)
+  console.log('enterGame data', data.words)
   // $('.game-stats').text(store.data.team)
 }
 

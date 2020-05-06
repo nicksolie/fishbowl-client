@@ -23,7 +23,9 @@ $(() => {
   $('.main').on('submit', '#create-game', gameEvents.onCreateGame)
   $('.main').on('submit', '#join-game', gameEvents.onJoinGame)
   $('.main').on('submit', '#join-game', uiGameEvents.joinGameSuccess)
-  $('.main').on('submit', '#enter-game', uiGameEvents.enterGameSuccess)
+  // $('.main').on('submit', '#enter-game', uiGameEvents.enterGameSuccess)
+  $('.main').on('submit', '#enter-game', gameEvents.onEnterGame)
+
 
   // Listen for new word submits
   $('.main').on('submit', '#word1', wordsEvents.onSubmit)

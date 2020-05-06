@@ -13,6 +13,7 @@ const submitFailure = function (data) {
 // List all of user's words
 const indexSuccess = function (data) {
   // Filter words to user(not need anymore after ProtectedController)
+  console.log(data.words)
   const userWords = data.words.filter(function (word) {
     return word.user.id === store.user.id
   })

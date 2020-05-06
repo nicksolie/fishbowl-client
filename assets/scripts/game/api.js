@@ -15,6 +15,10 @@ const createGame = function () {
 }
 
 const joinGame = function (data) {
+  console.log(data)
+  store.game = data.game
+  store.team = data.team
+  console.log('team', store.team)
   return $.ajax({
     url: config.apiUrl + '/players/',
     method: 'POST',
@@ -30,14 +34,6 @@ const joinGame = function (data) {
     }
   })
 }
-
-// data: {
-// player: {
-//   user_id: "'"${USERID}"'",
-//   team: "'"${TEAMID}"'",
-//   game_id: "'"${GAMEID}"'"
-// }
-// })
 
 module.exports = {
   createGame,
